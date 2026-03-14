@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Zafran Family Restaurant - Thane, Maharashtra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #8b7355;
+            --accent-gold: #d4af37;
+            --cream-light: #faf8f3;
+            --beige-warm: #e8dcc8;
+            --dark-brown: #3d2817;
+            --text-dark: #2c2c2c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream-light);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-hindi {
+            font-size: 0.9rem;
+            color: var(--beige-warm);
+            margin-top: -5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cream-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 70px;
+            height: 100vh;
+            background: linear-gradient(rgba(45, 80, 22, 0.6), rgba(45, 80, 22, 0.6)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23faf8f3" width="1200" height="800"/><circle cx="600" cy="400" r="200" fill="%23d4af37" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            animation: fadeInHero 1s ease-in-out;
+        }
+
+        @keyframes fadeInHero {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: slideInDown 0.8s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            animation: slideInUp 0.8s ease;
+            letter-spacing: 2px;
+        }
+
+        .hero-content .hindi-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+            animation: slideInDown 0.8s ease 0.2s both;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            background-color: var(--beige-warm);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-content h3 {
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* SPECIAL DISHES SECTION */
+        .special-dishes {
+            padding: 6rem 2rem;
+            background-color: #f2ede0;
+        }
+
+        .special-dishes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .dish-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .dish-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #d4af37, #f0e68c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .dish-content {
+            padding: 1.5rem;
+        }
+
+        .dish-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .dish-content p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .dish-price {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* MENU SECTION */
+        .menu {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .menu-category {
+            background-color: var(--beige-warm);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .menu-category h3 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .menu-item-name {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .menu-item-desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .menu-item-price {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* GALLERY SECTION */
+        .gallery {
+            padding: 6rem 2rem;
+            background-color: #f2ede0;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* RESERVATIONS SECTION */
+        .reservations {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reservation-form {
+            background-color: var(--beige-warm);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background-color: #fffbf0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--dark-brown);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(45, 80, 22, 0.3);
+        }
+
+        /* REVIEWS SECTION */
+        .reviews {
+            padding: 6rem 2rem;
+            background-color: #f2ede0;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .review-stars {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .review-author {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            margin: 0.3rem 0;
+        }
+
+        .contact-item a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--cream-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        footer p {
+            margin-top: 1.5rem;
+            color: var(--beige-warm);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem 2rem;
+                display: block;
+                text-align: left;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.1rem;
+            }
+
+            .hero-content .hindi-title {
+                font-size: 1.3rem;
+            }
+
+            .hero-buttons {
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                padding: 1.5rem;
+            }
+
+            .menu-grid,
+            .dishes-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                margin-top: 60px;
+                height: 70vh;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* SUCCESS MESSAGE */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="header-container">
+            <a href="#home" class="logo">
+                Delhi Zafran
+                <span class="logo-hindi">दिल्ली ज़फरान</span>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hindi-title">दिल्ली ज़फरान फैमिली रेस्टोरेंट</div>
+            <h1>Delhi Zafran Family Restaurant</h1>
+            <h2>🏰 Castle Mill Branch - Thane, Maharashtra</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Authentic Flavours. Family Atmosphere.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'})">Reserve a Table</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">View Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>Welcome to <strong>Delhi Zafran Family Restaurant</strong>, your premier destination for authentic Indian cuisine in Thane, Maharashtra. Our Castle Mill Branch brings you the warmth of traditional family dining combined with modern comfort.</p>
+            
+            <h3>🏡 Family-Friendly Dining</h3>
+            <p>We believe that the best meals are shared with loved ones. Our restaurant is designed to provide a comfortable, welcoming atmosphere where families can gather, celebrate, and create lasting memories. Whether it's a birthday celebration, a family reunion, or simply a weekend dinner, we ensure every visit is special.</p>
+            
+            <h3>🌶️ Authentic Indian Flavours</h3>
+            <p>Each dish is prepared with passion and precision, using traditional recipes and premium ingredients. Our master chefs craft every meal to perfection, bringing you the true taste of India's diverse culinary heritage. From mild to spicy, from vegetarian to non-vegetarian options, there's something for everyone.</p>
+            
+            <h3>✨ Comfortable Atmosphere</h3>
+            <p>Step into our elegantly designed restaurant and experience tranquility and warmth. Our soft lighting, premium furnishings, and attention to detail create an ambiance that's both sophisticated and inviting. It's the perfect blend of premium and comfort.</p>
+            
+            <h3>👨‍👩‍👧‍👦 Perfect for Every Occasion</h3>
+            <p>From intimate family dinners to large gatherings, our spacious dining areas can accommodate all your needs. Our attentive staff is dedicated to providing exceptional service, ensuring your experience exceeds expectations.</p>
+        </div>
+    </section>
+
+    <!-- SPECIAL DISHES SECTION -->
+    <section class="special-dishes">
+        <div class="special-dishes-container">
+            <h2 class="section-title">Our Signature Dishes</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-image">🍗</div>
+                    <div class="dish-content">
+                        <h4>Butter Chicken</h4>
+                        <p>Tender chicken in a rich, creamy tomato-based sauce with aromatic spices</p>
+                        <div class="dish-price">₹299</div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image">🧀</div>
+                    <div class="dish-content">
+                        <h4>Paneer Tikka</h4>
+                        <p>Succulent cottage cheese marinated and grilled to perfection with mild spices</p>
+                        <div class="dish-price">₹249</div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image">🍚</div>
+                    <div class="dish-content">
+                        <h4>Veg Biryani</h4>
+                        <p>Fragrant basmati rice layered with fresh vegetables and aromatic spices</p>
+                        <div class="dish-price">₹229</div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image">🥘</div>
+                    <div class="dish-content">
+                        <h4>Dal Makhani</h4>
+                        <p>Creamy lentils cooked overnight with butter and spices - a vegetarian delight</p>
+                        <div class="dish-price">₹199</div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image">🍞</div>
+                    <div class="dish-content">
+                        <h4>Tandoori Roti</h4>
+                        <p>Traditional Indian bread baked in our clay oven with a perfect char</p>
+                        <div class="dish-price">₹39</div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image">🍛</div>
+                    <div class="dish-content">
+                        <h4>Chicken Biryani</h4>
+                        <p>Royal biryani with tender chicken, fragrant rice, and traditional spices</p>
+                        <div class="dish-price">₹349</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>🥢 Starters</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Paneer Tikka</div>
+                    <div class="menu-item-desc">Grilled cottage cheese with spices</div>
+                    <div class="menu-item-price">₹249</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Chicken Tikka</div>
+                    <div class="menu-item-desc">Marinated and grilled chicken</div>
+                    <div class="menu-item-price">₹279</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Samosa (2 pcs)</div>
+                    <div class="menu-item-desc">Crispy pastry with potato filling</div>
+                    <div class="menu-item-price">₹59</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Seekh Kebab</div>
+                    <div class="menu-item-desc">Minced meat kebab with herbs</div>
+                    <div class="menu-item-price">₹219</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍲 Main Course</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Butter Chicken</div>
+                    <div class="menu-item-desc">Tender chicken in creamy tomato sauce</div>
+                    <div class="menu-item-price">₹299</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Paneer Makhani</div>
+                    <div class="menu-item-desc">Cottage cheese in butter sauce</div>
+                    <div class="menu-item-price">₹269</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Dal Makhani</div>
+                    <div class="menu-item-desc">Creamy lentils overnight cooked</div>
+                    <div class="menu-item-price">₹199</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Rogan Josh</div>
+                    <div class="menu-item-desc">Aromatic meat curry with yogurt</div>
+                    <div class="menu-item-price">₹329</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍞 Breads</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Tandoori Roti</div>
+                    <div class="menu-item-desc">Whole wheat bread from clay oven</div>
+                    <div class="menu-item-price">₹39</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Butter Naan</div>
+                    <div class="menu-item-desc">Soft naan with butter finish</div>
+                    <div class="menu-item-price">₹49</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Garlic Naan</div>
+                    <div class="menu-item-desc">Naan with aromatic garlic</div>
+                    <div class="menu-item-price">₹59</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Kulcha</div>
+                    <div class="menu-item-desc">Stuffed bread with vegetables</div>
+                    <div class="menu-item-price">₹69</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍚 Rice & Biryani</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Veg Biryani</div>
+                    <div class="menu-item-desc">Fragrant rice with vegetables</div>
+                    <div class="menu-item-price">₹229</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Chicken Biryani</div>
+                    <div class="menu-item-desc">Royal biryani with chicken</div>
+                    <div class="menu-item-price">₹349</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Mutton Biryani</div>
+                    <div class="menu-item-desc">Premium biryani with tender mutton</div>
+                    <div class="menu-item-price">₹399</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Jeera Rice</div>
+                    <div class="menu-item-desc">Basmati rice with cumin</div>
+                    <div class="menu-item-price">₹129</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍰 Desserts</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Gulab Jamun</div>
+                    <div class="menu-item-desc">Soft milk balls in sugar syrup</div>
+                    <div class="menu-item-price">₹119</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Kheer</div>
+                    <div class="menu-item-desc">Rice pudding with dry fruits</div>
+                    <div class="menu-item-price">₹99</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Rasmalai</div>
+                    <div class="menu-item-desc">Soft cheese in creamy sauce</div>
+                    <div class="menu-item-price">₹129</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Mango Lassi</div>
+                    <div class="menu-item-desc">Sweet yogurt drink with mango</div>
+                    <div class="menu-item-price">₹99</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍹 Beverages</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">Fresh Lemonade</div>
+                    <div class="menu-item-desc">Refreshing homemade lemonade</div>
+                    <div class="menu-item-price">₹79</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Mango Lassi</div>
+                    <div class="menu-item-desc">Sweet yogurt drink</div>
+                    <div class="menu-item-price">₹99</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Sweet Lassi</div>
+                    <div class="menu-item-desc">Traditional yogurt drink</div>
+                    <div class="menu-item-price">₹79</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Soft Drinks</div>
+                    <div class="menu-item-desc">Coca-Cola, Sprite, Fanta</div>
+                    <div class="menu-item-price">₹49</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #d4af37, #f0e68c); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🏢</div>
+                    <div class="gallery-overlay">
+                        <span>Restaurant Interior</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f0e68c, #daa520); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🍽️</div>
+                    <div class="gallery-overlay">
+                        <span>Fine Dining Area</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #daa520, #b8860b); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🍛</div>
+                    <div class="gallery-overlay">
+                        <span>Signature Dishes</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #cd853f, #a0522d); display: flex; align-items: center; justify-content: center; font-size: 4rem;">👨‍👩‍👧‍👦</div>
+                    <div class="gallery-overlay">
+                        <span>Family Dining</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #8b7355, #704214); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🔥</div>
+                    <div class="gallery-overlay">
+                        <span>Tandoori Preparations</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #704214, #4a3c28); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🎉</div>
+                    <div class="gallery-overlay">
+                        <span>Special Events</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATIONS SECTION -->
+    <section id="reservations" class="reservations">
+        <h2 class="section-title">Reserve a Table</h2>
+        <form class="reservation-form" id="reservationForm">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guests">Number of Guests *</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" placeholder="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="time">Time *</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" placeholder="Any special requests or dietary restrictions?" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Book Table</button>
+        </form>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews">
+        <div class="reviews-container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Delicious food and great family environment. We had an amazing experience celebrating our daughter's birthday here. The staff was attentive and the food was authentic."</div>
+                    <div class="review-author">- Priya Sharma</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                    <div class="review-text">"Excellent service and authentic taste. The butter chicken was perfectly creamy and the tandoori roti was fresh. Definitely coming back with the family."</div>
+                    <div class="review-author">- Raj Patel</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Best Indian restaurant in Thane! The biryani is absolutely divine, and the paneer tikka melts in your mouth. Love the warm ambiance perfect for family dinners."</div>
+                    <div class="review-author">- Anjali Desai</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Fantastic experience! The food quality is consistent, pricing is reasonable, and the staff treats you like family. Highly recommended for both casual and special occasions."</div>
+                    <div class="review-author">- Vikram Singh</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                    <div class="review-text">"Great place for family gatherings. The Dal Makhani is a must-try, and the hospitality is outstanding. A bit crowded on weekends but worth the wait!"</div>
+                    <div class="review-author">- Meera Gupta</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">"Premium quality food at family-friendly prices. The restaurant has a beautiful interior and the staff goes above and beyond to make your experience memorable."</div>
+                    <div class="review-author">- Arjun Nair</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📍 Location</h4>
+                    <p>Castle Mill Branch</p>
+                    <p>Thane, Maharashtra 400601</p>
+                    <p>India</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p><a href="tel:+919876543210">+91-9876-543-210</a></p>
+                    <p><a href="tel:+912251234567">+91-2251-234-567</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>✉️ Email</h4>
+                    <p><a href="mailto:info@delhizafran.com">info@delhizafran.com</a></p>
+                    <p><a href="mailto:reservations@delhizafran.com">reservations@delhizafran.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>🕐 Opening Hours</h4>
+                    <p><strong>Monday - Friday:</strong> 11:00 AM - 11:00 PM</p>
+                    <p><strong>Saturday - Sunday:</strong> 10:00 AM - 12:00 AM</p>
+                    <p><strong>Holidays:</strong> Open all days</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8652506878916!2d72.97649!3d19.2183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9a9a9a9a9a9%3A0x0!2sThane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MESSAGE -->
+    <div class="success-message" id="successMessage">
+        ✓ Reservation request received! We'll confirm shortly.
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h3>Delhi Zafran Family Restaurant</h3>
+            <p>दिल्ली ज़फरान फैमिली रेस्टोरेंट</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reservations">Reservations</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2026 Delhi Zafran Family Restaurant. All rights reserved. | Castle Mill Branch, Thane</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Reservation Form Handler
+        const reservationForm = document.getElementById('reservationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                guests: document.getElementById('guests').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                requests: document.getElementById('requests').value
+            };
+
+            // Log the reservation data (in a real scenario, this would be sent to a server)
+            console.log('Reservation Details:', formData);
+
+            // Show success message
+            successMessage.classList.add('show');
+
+            // Reset form
+            reservationForm.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    </script>
+
+</body>
+</html>
